@@ -10,4 +10,4 @@
 
 |   Week   |  Day  |   Date   | Contents                                                                                                |
 | :------: | :---: | :------: | ------------------------------------------------------------------------------------------------------- |
-| `1 week` | Day 1 | 24.07.11 | • NodeJS·VSCode 개발환경 구축 <br>• Node.js TypeScript 프로젝트 초기설정 <br>• 자바스크립트 Console API |
+| `1 week` | Day 1 | 24.07.11 | • NodeJS VSCode 개발환경 구축 <br>• Node.js TypeScript 프로젝트 초기설정 <br>• 자바스크립트 Console API |
