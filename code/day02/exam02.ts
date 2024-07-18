@@ -15,6 +15,16 @@
 // 🔑Code
 // -----------------------------------------------------------------------
 // ▷ 묶을 수 있는 데이터타입 정보정리
+// * 상품정보 데이터 정의
+type P_Info = {
+    p_name: string,             // 상품명
+    p_date: string,             // 등록일
+    p_cnt: number,              // 개수
+    p_price: number,            // 가격
+    p_sale: number,             // 할인율
+    p_grade: any[],          // 평점
+    p_review: any[]          // 구매평
+};
 // * 유저 데이터 정의
 type P_User = {
     name: string,               // 유저명
@@ -27,16 +37,7 @@ type P_User = {
     phone: number,              // 전화번호
     register: number            // 주민번호
 };
-// * 상품정보 데이터 정의
-type P_Info = {
-    p_name: string,             // 상품명
-    p_date: string,             // 등록일
-    p_cnt: number,              // 개수
-    p_price: number,            // 가격
-    p_sale: number,             // 할인율
-    p_grade: any[],          // 평점
-    p_review: any[]          // 구매평
-};
+
 
 // * 구매상품 내역
 type P_Purchase = {
