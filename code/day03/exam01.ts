@@ -7,7 +7,8 @@
 */
 // 🔑Code
 let var1: number = 3;
-let str1: any = "3"
+let str1: any = "3";
+// let str1: string = "3";
 console.log(var1 === str1 ? "동일" : "비동일");
 
 
@@ -19,8 +20,11 @@ console.log(var1 === str1 ? "동일" : "비동일");
 let num1: number = 23;
 let num2: number = 20;
 let num3: number = 80;
-let data: number;
-console.log((data=(num1>num2 ? num1 : num2))>num3 ? data : num3 );
+
+let data: number = num1 > num2 ? num1 : num2;
+console.log(data > num3 ? data : num3);
+
+console.log(num1 > num2 ? (num1 > num3 ? num1 : num3) : (num2 > num3 ? num2 : num3));
 
 
 /* 
@@ -33,7 +37,8 @@ console.log((data=(num1>num2 ? num1 : num2))>num3 ? data : num3 );
 // 🔑Code
 let txt01: string = "텍스트";
 let txt02: string = "";
-console.log((txt01 && txt02) ? txt01+txt02 : (txt01||"Empty")+(txt02||"Empty"));
+
+console.log((txt01 || "Empty") + (txt02 || "Empty"))
 
 
 /* 
