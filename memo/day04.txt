@@ -1,0 +1,4 @@
+- TypeScript 제어문(if/switch/while/for 문)
+	조건문 : if, switch
+	반복문 : for, while, do while
+	분기문 : break, continue, goto, return
