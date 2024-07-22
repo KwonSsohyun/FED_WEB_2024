@@ -88,14 +88,13 @@ let birthstone: string[] = ["가넷", "자수정", "아쿠아마린", "다이아
 for(let user of users){
 
     // ▶ 18살 이하 사용자라면 미성년자 출력 / 그외 성인 출력
-    if(user.age <= 18){
-        console.log(`${user.name} : 미성년자`);
-    } else{
-        console.log(`${user.name} : 성인`);
-    }
+    if(user.age <= 18) console.log(`${user.name} : 미성년자`);
+    else console.log(`${user.name} : 성인`);
     
     // ▶ 생년월일을 이용하여 윤년생인지 출력 / 그외 일반년생 출력
-    if((user.birth.year % 4 == 0 && user.birth.year % 100 != 0) || user.birth.year % 400 == 0 ){
+    //    user.birth.year % 100 != 0
+    //    ☞ != 0을 생략하여, 0이 아니면 true로 간주
+    if((user.birth.year % 4 == 0 && user.birth.year % 100) || user.birth.year % 400 == 0 ){
         console.log(`${user.name} : 윤년생`);
     } else{
         console.log(`${user.name} : 일반년생`);
