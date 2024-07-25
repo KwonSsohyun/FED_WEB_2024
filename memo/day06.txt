@@ -1,0 +1,33 @@
+- 함수(Function)
+	1. 함수 타입 선언
+		● 매개변수 타입 설정
+		  function 함수명 (인자:타입, ...) : 리턴타입 {}
+
+		● 리턴값 타입 설정
+		  : 반환값의 타입을 정하지 않을 때는 void라고 지정
+
+			function func(a: number, b: number): number {
+				return a + b;
+			}
+
+	2. 매개변수
+		● 기본 매개변수
+		  : 매개변수가 존재하지 않는 경우 "="를 통해 기본값을 지정할 수 있다.
+
+		● 선택적 매개변수
+		  : 파라미터 이름 끝에 ?를 추가하면 해당 파라미터를 옵션 파라미터로 설정할 수 있다.
+		    단, 첫 번째 파라미터는 항상 반드시 사용되어야 하는 파라미터이며, 옵션 파라미터로 설정할 수 없다.
+
+
+
+
+- 에러 핸들링(try / throw / catch / finally)
+		예외 처리 용으로 사용할 수 있는 Error 클래스가 있습니다.
+		오류를 던질 때는 throw 키워드를 사용합니다.
+
+		try {
+  			throw new Error('Something bad happened');
+		}
+		catch(e) {
+  			console.log(e);
+		}
