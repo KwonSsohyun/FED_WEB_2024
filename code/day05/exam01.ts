@@ -44,8 +44,7 @@ for(let user of Shop_Users){
         나이 : ${user.age} ,
         성별 : ${user.gender} ,
         주소 : ${user.address}`);
-    if(user.age <= 20) continue;
-    else console.log(`\t자주 구매하는 품목 : ${user.popularItem}`);
+    if(user.age >= 20) console.log(`\t자주 구매하는 품목 : ${user.popularItem}`);
 };
 
 
@@ -70,7 +69,7 @@ type BookInfo = {
     title: string,
     price: number,
     author: string,
-    bestYN: string
+    bestYN: boolean
 };
 // -----------------------------------------------------------------------
 // ▶ 도서정보 객체 정의
@@ -79,13 +78,13 @@ let Books_Info: BookInfo[] = [
         title: '흐르는 강물처럼',
         price: 15300,
         author: '셀리 리드',
-        bestYN: 'Y'
+        bestYN: true
     },
     {
         title: '불변의 법칙',
         price: 22500,
         author: '모건 하우절',
-        bestYN: 'N'
+        bestYN: false
     }
 ];
 // -----------------------------------------------------------------------
@@ -93,5 +92,5 @@ let Books_Info: BookInfo[] = [
 for(let book of Books_Info){
     console.log(`제목 : ${book.title}
         작가 : ${book.author}`);
-    if(book.bestYN == 'N') console.log(`\t가격 : ${book.price}`); 
+    if(!book.bestYN) console.log(`\t가격 : ${book.price}`); 
 }
