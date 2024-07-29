@@ -38,7 +38,7 @@ function ShowPeople(peoples: People[]){
     try {
         for(let people of peoples){
             // → 조건에 맞는 정보 출력
-            if(people.gender=='여성' && people.job=='사무직' && (people.age>=20 && people.age<=30)){
+            if(people.gender=='여성' && people.job=='사무직' && (people.age>=20 && people.age<=39)){
                 console.log(`[여성 + 사무직 + 2-30대]
                     성별 : ${people.gender}
                     직업 : ${people.job}
@@ -99,9 +99,9 @@ let books: Book[] = [
 function ShowBook(books: Book[]){
     try{
         for(let book of books){
-            if(book.price<15000 && book.bestYN) console.log(`제목 : ${book.title} 가격 : ${book.price} 베스트셀러 : ${book.bestYN}`);
-            if(book.author=='생텍쥐페리') console.log(`제목 : ${book.title} 작가 : ${book.author} 베스트셀러 : ${book.bestYN}`);
-            if(book.price < 0) throw new Error("가격 음수 오류");
+            if((book.price>0 && book.price<15000) && book.bestYN) console.log(`제목 : ${book.title} 가격 : ${book.price} 베스트셀러 : ${book.bestYN}`);
+            else if(book.author=='생텍쥐페리') console.log(`제목 : ${book.title} 작가 : ${book.author} 베스트셀러 : ${book.bestYN}`);
+            else if(book.price < 0) throw new Error("가격 음수 오류");
         }
     } catch(e){
         console.log((e as Error).message);
@@ -145,14 +145,12 @@ let animals: Animal[]= [
 
 function ShowAnimal(animals: Animal[]){
     try{
+        const habitats = ['산', '강', '바다'];
+
         for(let animal of animals){
-
-            const habitats = ['산', '강', '바다'];
-            if(habitats.includes(animal.habitat)) console.log(`품종 : ${animal.species} 서식지 : ${animal.habitat}`);
-
-            if(animal.species=='강아지' || animal.species=='고양이') console.log(`품종 : ${animal.species}`);
-
             if(animal.weight<0 && animal.height<0) throw new Error('몸무게&키 음수 오류');
+            if(habitats.includes(animal.habitat)) console.log(`품종 : ${animal.species} 서식지 : ${animal.habitat}`);
+            else if(animal.species=='강아지' || animal.species=='고양이') console.log(`품종 : ${animal.species}`);
         }
     }catch(e){
         console.log((e as Error).message);
