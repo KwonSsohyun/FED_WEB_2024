@@ -16,3 +16,4 @@
 | `2 week` | Day 4 | 24.07.19 | • TypeScript 제어문(조건문, 반복문, 보조제어문) <br>• 조건문(if~ else if~ else문, switch~case문) |
 | `3 week` | Day 5 | 24.07.23 | • 반복문(while문, do while문, for문, for in문, for of문) <br>• 보조제어문(break문, continue문) |
 | `3 week` | Day 6 | 24.07.25 | • 함수(Function) <br>• 에러 핸들링(try, throw, catch, finally) |
+| `4 week` | Day 7 | 24.07.30 | • 클래스(Class) <br>• 접근 제한자(Getter, Setter) <br>• 열거형(Enum) 타입 |
