@@ -121,11 +121,8 @@ for(let student of students){
     if(student.grade === Grade.grade3 && student.group === Group.group2) console.log(`${student.name}[${student.grade}/${student.group}] - ${student.score}`);
 
     try{
-        if(student.grade > Grade.grade3 || student.group > Group.group5) {
-            throw new Error('학년(Grade) 4~6 || 반(Group) 6~7 경우 오류');
-        }
+        if(student.grade > Grade.grade3 || student.group > Group.group5) {throw new Error();}
     }catch(e){
-        console.log((e as Error).message);
         break;
     }
 }
