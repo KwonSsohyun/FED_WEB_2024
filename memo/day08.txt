@@ -1,0 +1,7 @@
+- 클래스 확장·상속(Extends)
+- 클래스 다형성(Polymorphism)
+- 함수 오버로딩(Function Overloading)
+- 강제 형변환(as, instanceof)
+- 추상 클래스(Abstract Class)
+- 추상 함수(Abstract Method)
+- 인터페이스(Interface)
