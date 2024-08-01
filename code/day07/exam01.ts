@@ -121,7 +121,7 @@ for(let student of students){
     if(student.grade === Grade.grade3 && student.group === Group.group2) console.log(`${student.name}[${student.grade}/${student.group}] - ${student.score}`);
 
     try{
-        if(student.grade > Grade.grade3 || student.group > Group.group5) {throw new Error();}
+        if((0 < student.grade && student.grade> Grade.grade3) || (0<student.group && student.group > Group.group5)) {throw new Error();}
     }catch(e){
         break;
     }
