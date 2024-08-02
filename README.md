@@ -18,3 +18,4 @@
 | `3 week` | Day 6 | 24.07.25 | • 함수(Function) <br>• 에러 핸들링(try, throw, catch, finally) |
 | `4 week` | Day 7 | 24.07.30 | • 클래스(Class) <br>• 접근 제한자(Getter, Setter) <br>• 열거형(Enum) 타입 |
 | `4 week` | Day 8 | 24.08.01 | • TypeScript 객체지향 프로그래밍(OOP) <br>• 클래스 확장·상속(Extends) <br>• 추상 클래스·메서드(Abstract) <br>• 인터페이스(Interface) <br>• 클래스 다형성(Polymorphism) <br>• 객체 타입 비교 검사(instanceof) <br>• 객체 타입 형변환(as) <br>• 오버라이딩·오버로딩 |
+| `4 week` | Day 9 | 24.08.02 | • 제네릭(Generic) <br>• TypeScript 고급 타입(Advanced Types) <br>• TypeScript 유틸리티 타입(Utility Types) |
