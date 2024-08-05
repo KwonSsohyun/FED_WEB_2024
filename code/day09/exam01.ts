@@ -31,49 +31,39 @@ interface BookInfo {
     ea: number;     // 책 개수
 }
 
-// ▶ BookType 책 종류 - 열거형(Enum) 정의
-//   ☞ 책의 종류를 나타내는 열거형
-enum BookType {
-    GENERIC = "일반",
-    BESTSELLER = "베스트셀러",
-    STEADTSELLER = "스테디셀러",
-    RELIGION = "종교서적",
-    BANNED = "국가금서"
-}
-
 // ▶ Book 기본 - 클래스(Class) 정의
 //   ☞ 책의 기본 정보를 저장하고 이를 관리하는 클래스
 class Book implements BookInfo {
     // 책의 기본 정보를 저장하는 속성
-    private _title: string;
-    private _author: string;
-    private _price: number;
-    private _ea: number;
-    private _booktype: BookType;
+    #_title: string;
+    #_author: string;
+    #_price: number;
+    #_ea: number;
 
-    constructor(title:string, author:string, price:number, ea:number, booktype:BookType){
-        this._title = title;
-        this._author = author;
-        this._price = price;
-        this._ea = ea;
-        this._booktype = booktype;
+    constructor(title:string, author:string, price:number, ea:number){
+        this.#_title = title;
+        this.#_author = author;
+        this.#_price = price;
+        this.#_ea = ea;
     }
 
     // setter getter 메서드
-    set title(title:string) {this._title = title;}
-    get title():string {return this._title;}
+    set title(title:string) {this.#_title = title;}
+    get title():string {return this.#_title;}
 
-    set author(author:string) {this._author = author;}
-    get author():string {return this._author;}
+    set author(author:string) {this.#_author = author;}
+    get author():string {return this.#_author;}
 
-    set price(price:number) {this._price = price;}
-    get price():number {return this._price;}
+    set price(price:number) {this.#_price = price;}
+    get price():number {return this.#_price;}
 
-    set ea(ea:number) {this._ea = ea;}
-    get ea():number {return this._ea;}
+    set ea(ea:number) {this.#_ea = ea;}
+    get ea():number {return this.#_ea;}
 
-    set booktype(booktype: BookType) { this._booktype = booktype; }
-    get booktype(): BookType { return this._booktype; }
+    getDetails(): string {
+        return `Title: ${this.#_title}, Author: ${this.#_author}, Price: ${this.#_price}, Quantity: ${this.#_ea}`;
+    }
+
 }
 
 
@@ -85,15 +75,8 @@ class Book implements BookInfo {
 //   ☞ Book을 상속받아 베스트셀러의 총 판매부수를 관리
 //     → 책정보 + 총 판매부수
 class BestSeller extends Book{
-    private static totalSales: number = 0;  // 총 판매부수
-
     constructor(title:string, author:string, price:number, ea:number){
-        super(title, author, price, ea, BookType.BESTSELLER);
-        BestSeller.totalSales += ea;    // 총 판매부수 갱신
-    }
-
-    static getTotalSales(): number {
-        return BestSeller.totalSales;   // 총 판매부수 반환
+        super(title, author, price, ea);
     }
 }
 
@@ -106,19 +89,23 @@ class SteadtSeller extends Book{
     private static releaseYears: number[] = []; // 총 판매년도
 
     constructor(title:string, author:string, price:number, ea:number, private releaseYear: number){
-        super(title, author, price, ea, BookType.STEADTSELLER);
+        super(title, author, price, ea);
         SteadtSeller.releaseYears.push(releaseYear);    // 판매 연도 기록
     }
 
-    // 총 판매 연도수 및 평균 판매 연도수 계산
-    static getReleaseYears(): number[] {
-        if(SteadtSeller.releaseYears.length === 0) return [0,0];
-        const maxYear = Math.max(...SteadtSeller.releaseYears); // 배열의 요소를 개별 인자로 변환
-        const minYear = Math.min(...SteadtSeller.releaseYears);
-        const ReleaseYears = (maxYear - minYear) + 1;   // 포함 연도 계산
-        const AverageReleaseYear = ReleaseYears / SteadtSeller.releaseYears.length; // 평균 판매 연도수 계산
+    // 평균 판매 연도수를 계산하는 메서드
+    static getAverageReleaseYears(): number {
+        if(SteadtSeller.releaseYears.length === 0) return 0;
 
-        return [ReleaseYears, AverageReleaseYear];  // [총 판매연도수, 평균 판매연도수]
+        // 모든 연도의 합을 구함
+        const totalYears = SteadtSeller.releaseYears.reduce(function(acc, year) {
+            return acc + year;
+        }, 0);
+        return totalYears / SteadtSeller.releaseYears.length; // 총합을 개수로 나누어 평균 계산
+    }
+
+    getDetails():string {
+        return `${super.getDetails()}, Release Year: ${this.releaseYear}`;
     }
 }
 
@@ -139,13 +126,17 @@ class ReligionBook extends Book{
     private religionType: ReligionType;     // 종교 이름을 저장할 속성 
 
     constructor(title:string, author:string, price:number, ea:number, religionType:ReligionType){
-        super(title, author, price, ea, BookType.RELIGION);
+        super(title, author, price, ea);
         this.religionType = religionType;   // 종교 이름 설정
     }
 
     // 종교 이름을 반환하는 메서드
     getReligionType(): ReligionType{
         return this.religionType;
+    }
+
+    getDetails():string {
+        return `${super.getDetails()}, Religion Type: ${this.religionType}`;
     }
 }
 
@@ -166,13 +157,17 @@ class BannedBook extends Book{
     private bannedType: BannedType;     // 금지 국가 이름을 저장할 속성
 
     constructor(title:string, author:string, price:number, ea:number, bannedType:BannedType){
-        super(title, author, price, ea, BookType.BANNED);
+        super(title, author, price, ea);
         this.bannedType = bannedType;   // 금지 국가 이름 설정
     }
 
     // 금지 국가 이름을 반환하는 메서드
     getBannedType(): BannedType{
         return this.bannedType;
+    }
+
+    getDetails():string {
+        return `${super.getDetails()}, Banned Type: ${this.bannedType}`;
     }
 }
 
@@ -202,6 +197,19 @@ class BookManager<T extends Book>{
     getBook(): T[]{
         return this.books;
     }
+    // 모든 책의 상태를 문자열로 반환하는 메서드
+    getBookDetails():string {
+        // map으로 각 책의 세부 정보를 얻고, join으로 배열을 문자열로 변환
+        return this.books.map(function(ele){
+            // 각 책의 세부정보와 카테고리명 붙여 반환
+            // return ele.getDetails();    // 각 책의 세부 정보를 문자열로 반환
+            if(ele instanceof BestSeller) return `베스트셀러: ${ele.getDetails()}`;
+            else if(ele instanceof SteadtSeller) return `스테디셀러: ${ele.getDetails()}`;
+            else if (ele instanceof ReligionBook) return `종교서적: ${ele.getDetails()}`;
+            else if (ele instanceof BannedBook) return `국가금서: ${ele.getDetails()}`;
+            else return `기타: ${ele.getDetails()}`;
+        }).join(`\n`);  // 각 세부 정보를 줄바꿈으로 연결
+    }
 
     // ▶ 총 책 판매 갯수
     getTotalCnt():number {
@@ -221,12 +229,18 @@ class BookManager<T extends Book>{
 
     // ▶ 베스트셀러들의 총 판매부수
     getBestSellerTotalCnt(): number {
-        return BestSeller.getTotalSales();
+        return this.books
+            .filter(function(book){ 
+                return book instanceof BestSeller; // book이 BestSeller의 인스턴스인 경우에만 true를 반환하여 새로운 배열을 만든다.
+            })
+            .reduce(function(totcnt, book){
+                return totcnt + book.ea;   // 누적 계산을 위한 값
+            },0);
     }
 
     // ▶ 스테디셀러들의 평균 판매연도수
     getSteadtSellerReleaseYears(): number {
-        return SteadtSeller.getReleaseYears()[1];
+        return SteadtSeller.getAverageReleaseYears();
     }
 
 }
@@ -282,8 +296,8 @@ bookManager.addBooks(bannedBooks);
 // -----------------------------------------------------------------------
 // ▶▶▶ 데이터 출력
 // -----------------------------------------------------------------------
-console.log("모든 책 : ", bookManager.getBook());
+console.log("모든 책 : ", bookManager.getBookDetails());
 console.log("모든 책 → 개수 : ", bookManager.getTotalCnt());    // 260
 
 console.log("베스트셀러 → 총 판매부수 : ", bookManager.getBestSellerTotalCnt());    // 40
-console.log("스테디셀러 → 평균 판매연도수 : ", bookManager.getSteadtSellerReleaseYears());  // 8.67
+console.log("스테디셀러 → 평균 판매연도수 : ", bookManager.getSteadtSellerReleaseYears());  // 2011.333
