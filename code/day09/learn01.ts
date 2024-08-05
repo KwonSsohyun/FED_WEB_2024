@@ -136,7 +136,7 @@ class Library<Type>{
 }
 // Book을 확장한 무엇이든지 받아오겠어.
 // <? extends Book>
-let x:Library<Book1> = new Library<BestSeller>();
+let x:Library<Book1> = new Library<BestSellers>();
 let book:Library<Book1> = new Library<Book1>();
 // list 배열에 Book객체들이 각각 담긴다.
 book.Add(new Book1());
