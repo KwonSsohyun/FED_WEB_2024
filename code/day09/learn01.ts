@@ -119,8 +119,8 @@ console.log(v);
 /*
     관리형 클래스
 */
-class Book{}
-class BestSeller extends Book{}
+class Book1{}
+class BestSellers extends Book1{}
 
 // 책 관리가 될 수도 있고
 // 사람을 관리할 수 있는 클래스가 될 수 도 있고
@@ -136,13 +136,13 @@ class Library<Type>{
 }
 // Book을 확장한 무엇이든지 받아오겠어.
 // <? extends Book>
-let x:Library<Book> = new Library<BestSeller>();
-let book:Library<Book> = new Library<Book>();
+let x:Library<Book1> = new Library<BestSeller>();
+let book:Library<Book1> = new Library<Book1>();
 // list 배열에 Book객체들이 각각 담긴다.
-book.Add(new Book());
-book.Add(new Book());
-book.Add(new Book());
-book.Add(new Book());
+book.Add(new Book1());
+book.Add(new Book1());
+book.Add(new Book1());
+book.Add(new Book1());
 
 
 
