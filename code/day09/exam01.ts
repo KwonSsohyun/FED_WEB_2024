@@ -29,6 +29,7 @@ interface BookInfo {
     author: string; // 책 저자
     price: number;  // 책 가격
     ea: number;     // 책 개수
+    releaseYear?: number; // 선택적 속성
 }
 
 // ▶ Book 기본 - 클래스(Class) 정의
@@ -39,12 +40,14 @@ class Book implements BookInfo {
     #_author: string;
     #_price: number;
     #_ea: number;
+    #_releaseYear?: number; // 선택적 속성
 
-    constructor(title:string, author:string, price:number, ea:number){
+    constructor(title:string, author:string, price:number, ea:number, releaseYear?: number){
         this.#_title = title;
         this.#_author = author;
         this.#_price = price;
         this.#_ea = ea;
+        this.#_releaseYear = releaseYear; // 선택적 속성 초기화
     }
 
     // setter getter 메서드
@@ -59,6 +62,10 @@ class Book implements BookInfo {
 
     set ea(ea:number) {this.#_ea = ea;}
     get ea():number {return this.#_ea;}
+
+    // 선택적 속성의 getter 및 setter 추가
+    set releaseYear(releaseYear: number | undefined) { this.#_releaseYear = releaseYear; }
+    get releaseYear(): number | undefined { return this.#_releaseYear; }
 
     getDetails(): string {
         return `Title: ${this.#_title}, Author: ${this.#_author}, Price: ${this.#_price}, Quantity: ${this.#_ea}`;
@@ -86,22 +93,9 @@ class BestSeller extends Book{
 //   ☞ Book을 상속받아 스테디셀러의 판매 연도를 관리
 //     → 책정보 + 총 판매연도수
 class SteadtSeller extends Book{
-    private static releaseYears: number[] = []; // 총 판매년도
 
-    constructor(title:string, author:string, price:number, ea:number, private releaseYear: number){
-        super(title, author, price, ea);
-        SteadtSeller.releaseYears.push(releaseYear);    // 판매 연도 기록
-    }
-
-    // 평균 판매 연도수를 계산하는 메서드
-    static getAverageReleaseYears(): number {
-        if(SteadtSeller.releaseYears.length === 0) return 0;
-
-        // 모든 연도의 합을 구함
-        const totalYears = SteadtSeller.releaseYears.reduce(function(acc, year) {
-            return acc + year;
-        }, 0);
-        return totalYears / SteadtSeller.releaseYears.length; // 총합을 개수로 나누어 평균 계산
+    constructor(title:string, author:string, price:number, ea:number, releaseYear: number){
+        super(title, author, price, ea, releaseYear);
     }
 
     getDetails():string {
@@ -185,19 +179,21 @@ class BookManager<T extends Book>{
         this.books = [...initialBooks]; // 초기 책 배열 복사
     }
 
-    // 책을 배열에 추가하는 메서드
+    // ▶ 책을 배열에 추가하는 메서드
     addBook(book: T){
         this.books.push(book);
     }
-    // 여러 권의 책을 배열로 추가하는 메서드
+    // ▶▶ 여러 권의 책을 배열로 추가하는 메서드
     addBooks(books: T[]){
         this.books.push(...books);  // 배열의 요소를 개별 인자로 변환하여 추가
     }
-    // 저장된 책 반환
+    // ▶ 저장된 책 반환
     getBook(): T[]{
         return this.books;
     }
-    // 모든 책의 상태를 문자열로 반환하는 메서드
+
+
+    // ▶▶ 모든 책의 상태를 문자열로 반환하는 메서드
     getBookDetails():string {
         // map으로 각 책의 세부 정보를 얻고, join으로 배열을 문자열로 변환
         return this.books.map(function(ele){
@@ -211,6 +207,7 @@ class BookManager<T extends Book>{
         }).join(`\n`);  // 각 세부 정보를 줄바꿈으로 연결
     }
 
+
     // ▶ 총 책 판매 갯수
     getTotalCnt():number {
         // arr.reduce(callback(accumulator, currentValue, index, array), initialValue);
@@ -220,12 +217,14 @@ class BookManager<T extends Book>{
         },0);                       // 'reduce' 메서드의 최종 결과
     }
 
+
     // ▶ 총 책 가격
     getTotalPrice(): number {
         return this.books.reduce(function(totprice, book){
             return totprice + book.price;   // 누적 가격 계산
         },0);
     }
+
 
     // ▶ 베스트셀러들의 총 판매부수
     getBestSellerTotalCnt(): number {
@@ -238,11 +237,14 @@ class BookManager<T extends Book>{
             },0);
     }
 
+
     // ▶ 스테디셀러들의 평균 판매연도수
     getSteadtSellerReleaseYears(): number {
-        return SteadtSeller.getAverageReleaseYears();
+        return this.books
+        .filter(book => book instanceof SteadtSeller)                       // SteadtSeller 객체만 필터링
+        .reduce((totcnt, book) => totcnt + (book.releaseYear || 0), 0)      // releaseYear 합산 (releaseYear가 정의되지 않았을 때 0을 기본값으로 설정하여 연산에 오류가 발생하는 것을 방지)
+        / this.books.filter(book => book instanceof SteadtSeller).length;   // 평균 계산
     }
-
 }
 
 
