@@ -1,0 +1,7 @@
+- 비동기(Asynchronous)
+- 함수형 비동기(setInterval, setTimeout)
+- 콜백형 비동기(Promise)
+- 콜백(Callback)
+- 프로미스(Promise)
+- async/await
+- Fetch API
