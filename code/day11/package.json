@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  },
+  "name": "day11",
+  "version": "1.0.0",
+  "main": "test.js",
+  "type": "module",
+  "scripts": {
+    "beginCode" : "node index.js",
+    "tt": "node -v",
+    "start": "node test.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
+  "description": "",
+  "devDependencies": {
+    "react": "^18.3.1"
+  }
+}
