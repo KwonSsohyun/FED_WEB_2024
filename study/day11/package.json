@@ -1,0 +1,20 @@
+{
+  "name": "day11",
+  "version": "1.0.0",
+  "description": "",
+  "main": "exam01.js",
+  "type": "module",
+  "scripts": {
+    "start": "node test.js",
+    "finalCode": "node index.js",
+    "useCode": "node start.js",
+    "doubleCode": "node double.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    
+  }
+}
