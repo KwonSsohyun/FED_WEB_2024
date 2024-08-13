@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "jsx" : "react-jsx",          // 리액트 방식의 jsx파일 번역법 사용하겠다.
+    "jsxImportSource": "react",   // jsx파일 번역을 할때 어떤 패키지를 이용할 것인가 → 리액트
+    "module": "ESNext",           // 최신 기술까지 리액트에서 번역을 할거야.(ESNext)
+    "target": "ESNext",           // 생성되는 파일의 버전(하위 호환성)
+    "moduleResolution": "Node",   // Nodejs 문법 버전
+    "esModuleInterop": true,      // commonjs 모듈 호환성
+    "resolveJsonModule": true,    // json import 직접 가능
+    "strict": true,               // 엄격모드 → 오타같은걸 무시하지 않게 한다.(true)
+    "forceConsistentCasingInFileNames": true, // 운영체제별 파일명 구분 제어 → 대소문자를 구분하지 않겠다.
+    "skipLibCheck": true,         // .d.ts 오류 검출에만 필요한데 | 번역을 할때도 .d.ts를 번역하기위해 import | .d.ts 번역할때는 검사 제외
+
+    // 작성 → 오류 검사(strict) → 빌드 → 컴파일 검사(skipLibCheck) → 완성
+  }
+}
