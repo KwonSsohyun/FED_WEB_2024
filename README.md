@@ -21,4 +21,4 @@
 | `4 week` | Day 9 | 24.08.02 | • 제네릭(Generic) <br>• TypeScript 고급 타입(Advanced Types) <br>• TypeScript 유틸리티 타입(Utility Types) |
 | `5 week` | Day 10 | 24.08.06 | • 비동기(Asynchronous) <br>• 함수형 비동기(setInterval, setTimeout) <br>• 콜백형 비동기(Promise) <br>• 콜백(Callback) <br>• 프로미스(Promise) <br>• async/await <br>• Fetch API |
 | `5 week` | Day 11 | 24.08.08 | • Node.js 기본 명령어 <br>• Node.js 모듈(commonjs, module) <br>• CJS(CommonJS) <br>• ESM(ES Modules) <br>• CommonJS 내보내기(module.exports)/가져오기(require) <br>• ES Modules 내보내기(export)/가져오기(import) |
-| `6 week` | Day 12 | 24.08.13 | • React Vite TypeScript 환경 프로젝트 세팅 <br>• 리액트(React) <br>• 리액트 돔(react-dom) <br>• 비트(Vite) |
+| `6 week` | Day 12 | 24.08.13 | • React Vite TypeScript 환경 프로젝트 세팅 <br>• 리액트(React) <br>• 리액트 돔(React-DOM) <br>• 비트(Vite) |
