@@ -22,4 +22,4 @@
 | `5 week` | Day 10 | 24.08.06 | • 비동기(Asynchronous) <br>• 함수형 비동기(setInterval, setTimeout) <br>• 콜백형 비동기(Promise) <br>• 콜백(Callback) <br>• 프로미스(Promise) <br>• async/await <br>• Fetch API |
 | `5 week` | Day 11 | 24.08.08 | • Node.js 기본 명령어 <br>• Node.js 모듈(commonjs, module) <br>• CJS(CommonJS) <br>• ESM(ES Modules) <br>• CommonJS 내보내기(module.exports)/가져오기(require) <br>• ES Modules 내보내기(export)/가져오기(import) |
 | `6 week` | Day 12 | 24.08.13 | • React Vite TypeScript 환경 프로젝트 세팅 <br>• 리액트(React) <br>• 리액트 돔(React-DOM) <br>• 비트(Vite) |
-| `6 week` | Day 13 | 24.08.16 | • 리액트 JSX(TSX) 문법 <br>• 컴포넌트(Component) <br>• 사용자 정의 함수형 컴포넌트(Functional Component) |
+| `6 week` | Day 13 | 24.08.16 | • 리액트 JSX(TSX) 문법 <br>• 컴포넌트(Component) <br>• 사용자 정의 함수형 컴포넌트(Functional Component) <br>[• 리액트 함수형 컴포넌트(Component) 과제](https://github.com/KwonSsohyun/FED_WEB_2024/issues/1) |
