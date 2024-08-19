@@ -3,10 +3,10 @@ import { Book } from './app';
 
 interface Props{
     book: Book;
-    color?:string;
+    color?: string;
 }
 
-export default function(props:Props):JSX.Element{
+export default function(props:Props): JSX.Element{
     return <div style={{
         backgroundColor: props.color ? props.color : "red",
         width:"200px",

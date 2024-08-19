@@ -5,10 +5,10 @@ import BookShow from './book';
 
 interface Props{
     books: Book[];
-    color?:string;
+    color?: string;
 }
 
-export default function(props:Props):JSX.Element{
+export default function(props:Props): JSX.Element{
     return <>
         {
             props.books.map(v=><BookShow book={v} color={props.color}/>)

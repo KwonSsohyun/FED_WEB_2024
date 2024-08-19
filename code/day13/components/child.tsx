@@ -1,10 +1,10 @@
 import React from 'react';
 
 interface Results {
-    children:JSX.Element[]
+    children: JSX.Element[]
 }
 
-export default function(props:Results):JSX.Element{
+export default function(props:Results): JSX.Element{
     // {props.children}
     return <div>
         {

@@ -5,12 +5,12 @@ import React from 'react';
     interface 받아서 처리한다.
 */
 interface Results{
-    count:number;
+    count: number;
 }
 
-export default function(props:Results):JSX.Element{
+export default function(props:Results): JSX.Element{
 
-    // 매개변수로 받아온 숫자만큼 배열화면 추가
+    // ▶ 매개변수로 받아온 숫자만큼 배열화면 추가
     function ArrayDiv(count:number):JSX.Element[] {
         let results: JSX.Element[] = [];
 

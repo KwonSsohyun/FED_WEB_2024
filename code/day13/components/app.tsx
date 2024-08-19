@@ -2,7 +2,6 @@ import React from 'react';
 import BookShow from './book';
 import Library from './library';
 
-
 class Book {
     title: string;
     price: number;
@@ -15,7 +14,7 @@ class Book {
 export { Book };
 
 
-export default function():JSX.Element {
+export default function(): JSX.Element {
     const books: Book[] = [
         new Book("어린왕자", 5000),
         new Book("종이여자", 7500),

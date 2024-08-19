@@ -93,7 +93,6 @@ const root = ReactDOM.createRoot(document.querySelector("#reactRoot") as HTMLEle
 /*
     ▶ React의 컴포넌트(Component) - 함수형
 */
-
     import Header from './header';
     import Body from './body';
     import Child from './child';
