@@ -1,0 +1,5 @@
+- 리액트 기본태그
+- StrictMode
+- Fragment
+- Suspense/lazy()
+- Profiler
