@@ -23,4 +23,4 @@
 | `5 week` | Day 11 | 24.08.08 | • Node.js 기본 명령어 <br>• Node.js 모듈(commonjs, module) <br>• CJS(CommonJS) <br>• ESM(ES Modules) <br>• CommonJS 내보내기(module.exports)/가져오기(require) <br>• ES Modules 내보내기(export)/가져오기(import) |
 | `6 week` | Day 12 | 24.08.13 | • React Vite TypeScript 환경 프로젝트 세팅 <br>• 리액트(React) <br>• 리액트 돔(React-DOM) <br>• 비트(Vite) |
 | `6 week` | Day 13 | 24.08.16 | • 리액트 JSX(TSX) 문법 <br>• 컴포넌트(Component) <br>• 사용자 정의 함수형 컴포넌트(Functional Component) <br>[• 리액트 함수형 컴포넌트(Component) 과제](https://github.com/KwonSsohyun/FED_WEB_2024/issues/1) |
-| `7 week` | Day 14 | 24.08.20 | • 리액트 기본태그 <br>• StrictMode <br>• Fragment <br>• Suspense/lazy() <br>• Profiler |
+| `7 week` | Day 14 | 24.08.20 | • 리액트 내장 컴포넌트 <br>• `<Fragment>` JSX 요소 그룹화 <br>• `<Profiler>` 렌더링 성능 측정 <br>• `<StrictMode>` 개발 중 문제 경고 <br>• `<Suspense>` 동적 컴포넌트 로딩 중 대체 UI 표시 <br>• `React.lazy()` 컴포넌트를 동적으로 불러오기 |
