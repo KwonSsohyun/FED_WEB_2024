@@ -4,8 +4,8 @@ interface Props {
     style: any;
 }
 
-export default function(props: Props) {
+export default function({ style }: Props) {
     return <>
-        <div style={props.style}></div>;
+        <div style={ style }></div>
     </>
 }
