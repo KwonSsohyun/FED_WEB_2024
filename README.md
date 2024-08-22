@@ -24,3 +24,4 @@
 | `6 week` | Day 12 | 24.08.13 | • React Vite TypeScript 환경 프로젝트 세팅 <br>• 리액트(React) <br>• 리액트 돔(React-DOM) <br>• 비트(Vite) |
 | `6 week` | Day 13 | 24.08.16 | • 리액트 JSX(TSX) 문법 <br>• 컴포넌트(Component) <br>• 사용자 정의 함수형 컴포넌트(Functional Component) <br>[• 리액트 함수형 컴포넌트(Component) 과제](https://github.com/KwonSsohyun/FED_WEB_2024/issues/1) |
 | `7 week` | Day 14 | 24.08.20 | • 리액트 내장 컴포넌트 <br>• `<Fragment>` JSX 요소 그룹화 <br>• `<Profiler>` 렌더링 성능 측정 <br>• `<StrictMode>` 개발 중 문제 경고 <br>• `<Suspense>` 동적 컴포넌트 로딩 중 대체 UI 표시 <br>• `React.lazy()` 컴포넌트를 동적으로 불러오기 |
+| `7 week` | Day 15 | 24.08.22 | • 리액트 이벤트 처리(Event Handling) <br>• 리액트 훅(Hooks) <br>• 함수형 컴포넌트 상태값 관리(useState) |
