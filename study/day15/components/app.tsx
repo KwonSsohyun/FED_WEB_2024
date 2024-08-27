@@ -19,7 +19,7 @@ export default function App(): JSX.Element {
     const removeY = ()=>{ if(ySize>1) setYSize(ySize - 1) };    // Y 감소 (최소 1 유지)
 
     const addBoth = ()=>{ addX(); addY(); };                    // X와 Y 모두 추가
-    const removeBoth = ()=>{ if(xSize>1 && ySize>1) removeX(); removeY(); };    // X와 Y 모두 감소 (최소 1 유지)
+    const removeBoth = ()=>{ removeX(); removeY(); };           // X와 Y 모두 감소 (최소 1 유지)
 
 
     // ▶ 렌더링
