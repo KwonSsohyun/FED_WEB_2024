@@ -1,0 +1,7 @@
+- 리액트 훅(Hooks)
+- useEffect		: 특정 값이 바뀔 때 추가 작업 수행
+- useMemo		: 계산한 값을 기억해서 다시 사용
+- useCallback		: 함수를 기억해서 다시 사용
+- useRef		: 렌더링 없이 DOM 요소를 관리
+- useDeferredValue	: 값 변경을 천천히 처리
+- useTransition		: 함수 실행을 천천히 처리
