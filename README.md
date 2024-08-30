@@ -27,3 +27,4 @@
 | `7 week` | Day 15 | 24.08.22 | • 리액트 이벤트 처리(Event Handling) <br>• 리액트 훅(Hooks) <br>• 함수형 컴포넌트 상태값 관리(useState) |
 | `8 week` | Day 16 | 24.08.27 | • 리액트 훅(Hooks) <br>• 함수형 컴포넌트 상태값 관리(useState) <br>• 복잡한 상태 로직 처리(useReducer) <br>• 전역 상태 공유(useContext) |
 | `8 week` | Day 17 | 24.08.29 | • 리액트 훅(Hooks) <br>• 특정 값 바뀔 때 추가 작업 수행(useEffect) <br>• 계산한 값 기억해 다시 사용(useMemo) <br>• 함수를 기억해 다시 사용(useCallback) <br>• 렌더링 없이 DOM 요소 관리(useRef) <br>• 값 변경 천천히 처리(useDeferredValue) <br>• 함수 실행 천천히 처리(useTransition) |
+| `8 week` | Day 18 | 24.08.30 | • 사용자 정의 훅(Custom Hook) <br>• 토글(Toggle) 훅 <br>• 클램프(Clamp) 훅 <br>• 디테일(Details) 훅 |
