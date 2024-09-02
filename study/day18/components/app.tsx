@@ -3,10 +3,10 @@ import { useToggle, useHover } from '../hooks';
 
 // ▶ 과일 정보 타입 정의
 interface Fruit {
-    name: string,       // 이름
-    img: string,        // 이미지
-    info: string,       // 정보
-    habitats: string[]  // 자생지
+    name: string;       // 이름
+    img: string;        // 이미지
+    info: string;       // 정보
+    habitats: string[]; // 자생지
 }
 
 // ▶ 과일 데이터
