@@ -29,7 +29,7 @@ export default function () {
 
 
 // ▶▶▶ 사용자 정의 훅(Custom Hook)
-import { useToggle, useClamp } from '../hook';
+import { useToggle, useClamp } from '../hooks';
 
 
 // ▶ 토글(Toggle) 훅
@@ -70,7 +70,7 @@ export default function () {
 
 
 // ▶ 디테일(Details) 훅 
-import { useDetails } from '../hook';
+import { useDetails } from '../hooks';
 
 export default function () {
 

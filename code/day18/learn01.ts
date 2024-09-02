@@ -28,7 +28,7 @@
 
       ▶ 사용자 정의 훅을 만들때 무조건 제일 먼저 해야하는 것!
          ● 훅들을 모아둘 폴더를 만든다. (제일 중요한 첫 번째)
-           → "📁hook" 새 폴더 생성
+           → "📁hooks" 새 폴더 생성
 
          ● 훅들을 모아둘 폴더에 index.tsx 파일을 만드는 것 (제일 중요한 두 번째)
            → "📜index.tsx" 새 파일 생성
@@ -49,8 +49,8 @@
                → import ~ from '폴더명' 
                  폴더명을 적는다면 해당 폴더에 들어있는 index라는 이름을 가진 파일의 export를 가져온다.   
                  ex) "app.tsx" 에서 훅 가져와 쓸 수 있다.
-                     import {test, other} from '../hook';  
-                     import { useEffect } from '../hook';
+                     import {test, other} from '../hooks';  
+                     import { useEffect } from '../hooks';
 
                      export default function () {
                         return <>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { useToggle } from '../hook';
+import { useToggle } from '../hooks';
 
 // ▶ 디테일(Details) 훅 
 interface Props {
