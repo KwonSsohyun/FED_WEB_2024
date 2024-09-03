@@ -1,0 +1,6 @@
+- 리액트 라우터 돔(React Router DOM)
+- 기본 구성 컴포넌트(BrowserRouter, Routes, Route)
+- 중첩 경로 설정
+- 중첩 경로 내 콘텐츠 표시(Outlet)
+- 페이지 이동 링크(Link)
+- 경로 상태 확인(NavLink)
