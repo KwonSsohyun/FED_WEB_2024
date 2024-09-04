@@ -31,29 +31,41 @@ const fruits: Fruit[] = [
     },
 ];
 
+
+// ▶ 해당 과일 정보 출력 컴포넌트
 export default function FruitPage({ fruitName }: {fruitName: string}) {
+
+    // ● fruitName으로 과일 데이터 찾기
     const fruit = fruits.find( (fruit)=> fruit.name === fruitName );
 
+    // ● 과일 데이터가 없으면 에러 메시지 반환
     if(!fruit) {
         return <div>해당 과일 정보를 찾을 수 없습니다.</div>
     }
 
+    // ● 과일 데이터가 존재하면, FruitItem 컴포넌트를 렌더링
     return <div>
                 <FruitItem fruit={fruit} />
             </div>
 }
 
 
-// ▶ 각 과일 컴포넌트
+// ▶ 각 과일의 세부 정보를 렌더링하는 컴포넌트
 const FruitItem: React.FC<{ fruit: Fruit }> = ({ fruit }) => {
+
+    // ● useToggle 훅을 사용하여 이미지의 가시성 상태 관리
     const { isVisible, toggleVisible} = useToggle(true);
+    // ● useHover 훅을 사용하여 마우스 오버 상태 관리
     const { isHover, handleMouseEnter, handleMouseLeave } = useHover();
     
     return <div>
+                {/* 과일 이름을 클릭하면 이미지의 가시성을 토글 */}
                 <h2 onClick={toggleVisible}>{fruit.name}</h2>
+                {/* 이미지가 보이는 상태일 때만 렌더링 */}
                 { isVisible && (
                     <img src={fruit.img} alt={fruit.name} style={{width:'150px'}}/>
                 )}
+                {/* 마우스 오버 시 글씨 굵기 변경 */}
                 <p 
                     onMouseEnter = {handleMouseEnter}
                     onMouseLeave = {handleMouseLeave}
@@ -61,6 +73,7 @@ const FruitItem: React.FC<{ fruit: Fruit }> = ({ fruit }) => {
                 >
                     {fruit.info}
                 </p>
+                {/* 자생지 목록을 테이블로 렌더링 */}
                 <table>
                     <thead>
                         <tr>
