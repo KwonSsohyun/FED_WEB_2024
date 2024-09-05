@@ -17,7 +17,7 @@
 | `3 week` | Day 5 | 24.07.23 | • 반복문(while문, do while문, for문, for in문, for of문) <br>• 보조제어문(break문, continue문) |
 | `3 week` | Day 6 | 24.07.25 | • 함수(Function) <br>• 에러 핸들링(try, throw, catch, finally) |
 | `4 week` | Day 7 | 24.07.30 | • 클래스(Class) <br>• 접근 제한자(Getter, Setter) <br>• 열거형(Enum) 타입 |
-| `4 week` | Day 8 | 24.08.01 | • TypeScript 객체지향 프로그래밍(OOP) <br>• 클래스 확장·상속(Extends) <br>• 추상 클래스·메서드(Abstract) <br>• 인터페이스(Interface) <br>• 클래스 다형성(Polymorphism) <br>• 객체 타입 비교 검사(instanceof) <br>• 객체 타입 형변환(as) <br>• 오버라이딩·오버로딩 |
+| `4 week` | Day 8 | 24.08.01 | • TypeScript 객체지향 프로그래밍(OOP) <br>• 클래스 확장·상속(Extends) <br>• 추상 클래스·메서드(Abstract) <br>• 인터페이스(Interface) <br>• 클래스 다형성(Polymorphism) <br>• 객체 타입 비교 검사(instanceof) <br>• 객체 타입 직접 명시(as) <br>• 오버라이딩·오버로딩 |
 | `4 week` | Day 9 | 24.08.02 | • 제네릭(Generic) <br>• TypeScript 고급 타입(Advanced Types) <br>• TypeScript 유틸리티 타입(Utility Types) |
 | `5 week` | Day 10 | 24.08.06 | • 비동기(Asynchronous) <br>• 함수형 비동기(setInterval, setTimeout) <br>• 콜백형 비동기(Promise) <br>• 콜백(Callback) <br>• 프로미스(Promise) <br>• async/await <br>• Fetch API |
 | `5 week` | Day 11 | 24.08.08 | • Node.js 기본 명령어 <br>• Node.js 모듈(commonjs, module) <br>• CJS(CommonJS) <br>• ESM(ES Modules) <br>• CommonJS 내보내기(module.exports)/가져오기(require) <br>• ES Modules 내보내기(export)/가져오기(import) |
