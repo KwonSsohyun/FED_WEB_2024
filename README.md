@@ -29,3 +29,4 @@
 | `8 week` | Day 17 | 24.08.29 | • 리액트 훅(Hooks) <br>• 특정 값 바뀔 때 추가 작업 수행(useEffect) <br>• 계산한 값 기억해 다시 사용(useMemo) <br>• 함수를 기억해 다시 사용(useCallback) <br>• 렌더링 없이 DOM 요소 관리(useRef) <br>• 값 변경 천천히 처리(useDeferredValue) <br>• 함수 실행 천천히 처리(useTransition) |
 | `8 week` | Day 18 | 24.08.30 | • 사용자 정의 훅(Custom Hook) <br>• 토글(Toggle) 훅 <br>• 클램프(Clamp) 훅 <br>• 디테일(Details) 훅 |
 | `9 week` | Day 19 | 24.09.03 | • 리액트 라우터 돔(React Router DOM) <br>• 기본 구성 컴포넌트(BrowserRouter, Routes, Route) <br>• 중첩 라우트 <br>• 중첩 경로 내 콘텐츠 표시(Outlet) <br>• 페이지 이동 링크(Link) <br>• 경로 상태 확인(NavLink) <br>[• 리액트 라우터 돔과 커스텀 훅을 이용한 과제](https://github.com/KwonSsohyun/FED_WEB_2024/issues/2) |
+| `9 week` | Day 20 | 24.09.05 | • 리액트 동적 라우팅(Dynamic Routing) <br>• useParams 훅(URL 경로 파라미터) <br>• useLocation 훅(URL 전체 정보) <br>• useNavigate 훅(경로 이동 함수 제공) <br>• useSearchParams 훅(쿼리문자열 다루는 훅) <br>• 사용자 정의 훅(useQuery : URL 쿼리문자열을 객체형태 변환) <br>• 사용자 정의 훅(useSearch : 객체를 쿼리문자열로 변환하고 업데이트) |
