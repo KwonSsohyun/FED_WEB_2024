@@ -9,10 +9,6 @@
    ⇒ 오늘 배우는 내용
       react-router-dom 에서 우리가 배웠던 곳까지 사용할만한 훅들
       일반적으로 많이 이용하는 훅들만 배운다.
-        Path Parameter
-        useNavigate, useParams, useLocation 훅
-        useParams().id
-
 
 
 
@@ -212,11 +208,6 @@
         기본적으로는 form을 이용하는 수 밖에 없으니까
         그래서 게시판에 특정 게시글로 이동하는 기능, 그리고 돌아오는 기능, 페이지 이동 기능 같은걸 만들고 싶을때
         useSearch가 있느냐 없느냐에 따라 페이지 제작 난이도가 매우 많이 바뀐다.
-
-
-
-
-
 
 
 */
