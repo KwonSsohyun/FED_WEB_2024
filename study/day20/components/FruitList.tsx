@@ -75,7 +75,7 @@ export default function FruitList() {
     //   페이지를 변경할 때 호출됩니다. 
     //   새 페이지 번호가 유효하면 페이지 상태를 업데이트하고 URL도 변경합니다.
     const handlePageChange = (newPage:number) => {
-        if(newPage > 1 && newPage <= totalPages){
+        if(newPage >= 1 && newPage <= totalPages){
             setCurrentPage(newPage);                    // 페이지 상태 업데이트
             navigate(`/${fruitName}?page=${newPage}`);  // 페이지 번호가 포함된 URL로 이동
         }
