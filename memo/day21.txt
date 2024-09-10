@@ -1,0 +1,5 @@
+- MobX 상태 관리 라이브러리
+- MobX Store 상태 관리 파일(외부 저장소)
+- 액션 정의(makeAutoObservable)
+- 상태 연결 리액트 컴포넌트(observer)
+- 컴포넌트 필요한 상태 주입(inject)
