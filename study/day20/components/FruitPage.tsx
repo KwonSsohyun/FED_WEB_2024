@@ -72,7 +72,7 @@ export default function FruitPage() {
                 </tbody>
             </table>
             {/* 목록 페이지로 돌아가기 버튼 */}
-            <button onClick={() => navigate(`/${fruit.name}?page=${page}`)}>목록으로 돌아가기</button>
+            <button onClick={() => navigate(`/${fruitName}?page=${page}`)}>목록으로 돌아가기</button>
         </div>
     );
 }
