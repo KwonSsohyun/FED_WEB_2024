@@ -1,0 +1,4 @@
+- MobX 상태 변경 수행 메서드 적용 데코레이터(@action)
+- 상태 데이터 변경될 때만 자동으로 재계산(computed)
+- 함수 내부 상태 데이터 값 변경(runInAction)
+- reactions 종류(autorun, reaction, when)
