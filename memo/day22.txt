@@ -1,4 +1,7 @@
-- MobX 상태 변경 수행 메서드 적용 데코레이터(@action)
-- 상태 데이터 변경될 때만 자동으로 재계산(computed)
-- 함수 내부 상태 데이터 값 변경(runInAction)
-- reactions 종류(autorun, reaction, when)
+- 상태 변경 메서드 적용(@action)
+- 상태 변경 시 자동 재계산 및 값 캐싱 get 함수(computed)
+- 비동기 작업 중 상태 변경(runInAction)
+- MobX 이벤트 시스템
+- Observable 값 변경 시 자동 실행(autorun)
+- 상태 값이 바뀔 때만 콜백 함수 실행(reaction)
+- 조건 만족 시 단일 실행(when)
