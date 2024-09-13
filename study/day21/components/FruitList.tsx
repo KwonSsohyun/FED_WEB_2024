@@ -43,10 +43,11 @@ const FruitList = inject('fruitStore')(observer(({ fruitStore }: Props) => {
     const filteredFruits = fruitStore?.getFruitByName(fruitName as string) || [];
     console.log('Filtered Fruits:', filteredFruits);
 
-    // ● 과일 정보를 찾을 수 없으면 에러 메시지 표시
-    if(!filteredFruits.length) {
-        return <div>해당 과일 정보를 찾을 수 없습니다.</div>
-    }
+    // ● 과일의 공통 데이터 가져오기
+    const fruitInfo = fruitStore?.fruitInfo;
+
+    // ● fruitName이 정의되어 있고 fruitInfo가 객체일 때만 접근
+    const fruitImage = fruitName && fruitInfo && fruitInfo[fruitName]?.img;
 
 
     // ● 총 페이지 수 계산
@@ -88,6 +89,11 @@ const FruitList = inject('fruitStore')(observer(({ fruitStore }: Props) => {
         }
     };
 
+    // ● 과일 정보를 찾을 수 없으면 에러 메시지 표시
+    if(!filteredFruits.length) {
+        return <div>해당 과일 정보를 찾을 수 없습니다.</div>
+    }
+
     return (
         <div>
             <h2>{fruitName} 게시판 🍎🍌🍈</h2>
@@ -95,7 +101,7 @@ const FruitList = inject('fruitStore')(observer(({ fruitStore }: Props) => {
                 {/* 현재 페이지의 과일 목록을 렌더링 */}
                 {currentFruits.map((fruit, index) => (
                     <li key={index} onClick={() => goToFruitDetail(fruit.id)}>
-                        <img src={fruit.img} alt={fruit.name} style={{ width: '50px', marginRight: '10px' }} />
+                        <img src={fruitImage} alt={fruit.name} style={{ width: '50px', marginRight: '10px' }} />
                         {fruit.name}{fruit.id}
                     </li>
                 ))}

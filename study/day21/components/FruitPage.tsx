@@ -40,6 +40,13 @@ export default inject('fruitStore')(observer(({ fruitStore }: Props) => {
     //   fruitStore에서 fruitName으로 과일 목록을 필터링 후, id로 찾기
     const fruit = fruitStore?.getFruitByName(fruitName as string).find(fruit => fruit.id === id);
 
+    // ● 과일의 공통 데이터 가져오기
+    const fruitInfo = fruitStore?.fruitInfo;
+
+    // ● fruitName이 정의되어 있고 fruitInfo가 객체일 때만 접근
+    const fruitImage = fruitName && fruitInfo && fruitInfo[fruitName]?.img;
+    const fruitHabitats = fruitName && fruitInfo && fruitInfo[fruitName]?.habitats;
+
     console.log('Fruit Name:', fruitName);
     console.log('Fruit ID:', fruitId);
     console.log('Fruit:', fruit);
@@ -61,7 +68,7 @@ export default inject('fruitStore')(observer(({ fruitStore }: Props) => {
             <h2 onClick={toggleVisible}>{fruit.name}</h2>
             {/* 이미지가 보이는 상태일 때만 렌더링 */}
             { isVisible && (
-                <img src={fruit.img} alt={fruit.name} style={{width:'150px'}}/>
+                <img src={fruitImage} alt={fruit.name} style={{width:'150px'}}/>
             )}
             {/* 마우스 오버 시 글씨 굵기 변경 */}
             <p 
@@ -78,7 +85,7 @@ export default inject('fruitStore')(observer(({ fruitStore }: Props) => {
                     </tr>
                 </thead>
                 <tbody>
-                    {fruit.habitats.map((habitat, idx) => (
+                    {fruitHabitats && fruitHabitats.map((habitat, idx) => (
                         <tr key={idx}>
                             <td>{habitat}</td>
                         </tr>
