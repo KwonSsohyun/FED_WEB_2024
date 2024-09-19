@@ -1,0 +1,11 @@
+/*  ▶ 컴포넌트 방식
+       .bg1-Ekei2k
+        → 무작위한 문자열이 뒤에 붙는다. 
+*/
+.bg1 {
+    background-color: red;
+}
+
+.bg2 {
+    background-color: #008000;
+}

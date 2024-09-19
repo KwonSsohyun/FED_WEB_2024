@@ -1,0 +1,4 @@
+- 리액트 Tailwind CSS 적용
+- Tailwind 설정 및 사용방법
+- Tailwind CSS 주요 스타일링 클래스 사용
+- Tailwind 설정 파일 옵션(content, theme, variants, plugins, darkMode, important)
