@@ -33,4 +33,4 @@
 | `10 week` | Day 21 | 24.09.10 | • MobX 상태 관리 라이브러리 <br>• MobX Store 상태 관리 파일(외부 저장소) <br>• 상태 관찰 설정(makeAutoObservable) <br>• 상태 변화 감지 컴포넌트 리렌더링(observer) <br>• 특정 스토어 컴포넌트 주입(inject) <br>[• MobX 상태 관리와 React Router DOM 동적 라우팅 과제](https://github.com/KwonSsohyun/FED_WEB_2024/issues/4) |
 | `10 week` | Day 22 | 24.09.12 | • 상태 변경 메서드 적용(@action) <br>• 상태 변경 시 자동 재계산 및 값 캐싱 get 함수(computed) <br>• 비동기 작업 후 상태 변경(runInAction) <br>• MobX 이벤트 시스템 <br>• Observable 값 변경 시 자동 실행(autorun) <br>• 상태 값 변경 시 콜백 함수 실행(reaction) <br>• 조건 만족 시 단일 실행(when) |
 | `11 week` | Day 23 | 24.09.19 | • 리액트 Tailwind CSS 적용 <br>• Tailwind 설정 및 사용방법 <br>• Tailwind CSS 주요 스타일링 클래스 사용 <br>• Tailwind 설정 파일 옵션(content, theme, variants, plugins) |
-| `11 week` | Day 24 | 24.09.20 | • Tailwind CSS 커스텀(Custom) <br>• Theme 커스텀 <br>• Tailwind CSS 선택자 <br>• Variants 옵션 |
+| `11 week` | Day 24 | 24.09.20 | • Tailwind CSS 커스텀(Custom) <br>• Theme 커스텀 <br>• Tailwind CSS 선택자 <br>• Variants 옵션 <br>[• React와 Tailwind CSS를 활용한 이미지 그리드 및 레이아웃 과제](https://github.com/KwonSsohyun/FED_WEB_2024/issues/5) |
