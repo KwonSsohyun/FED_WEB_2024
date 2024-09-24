@@ -15,7 +15,7 @@ const images = [
 export default function Feed() {
     // Feed는 images 배열에 있는 각 URL에 대해 Post 컴포넌트를 만듭니다.
     // map 함수를 사용해서 각 이미지 URL을 Post에 imageUrl prop으로 전달
-    return <div className='grid grid-cols-3 gap-0'>
+    return <div className='grid grid-cols-3 gap-2'>
         {images.map((img, idx) => (
             <Post key={idx} imageUrl={img} />
         ))}

@@ -10,7 +10,7 @@ export default function App() {
         <div>
             <Feed/>
         </div>
-        <footer className='flex justify-between items-center px-7 py-5 text-2xl'>
+        <footer className='flex justify-center items-center px-7 py-5 text-3xl gap-96'>
             <AiOutlineHome/>
             <AiOutlineSearch/>
             <AiOutlinePlusSquare/>
