@@ -34,4 +34,4 @@
 | `10 week` | Day 22 | 24.09.12 | • 상태 변경 메서드 적용(@action) <br>• 상태 변경 시 자동 재계산 및 값 캐싱 get 함수(computed) <br>• 비동기 작업 후 상태 변경(runInAction) <br>• MobX 이벤트 시스템 <br>• Observable 값 변경 시 자동 실행(autorun) <br>• 상태 값 변경 시 콜백 함수 실행(reaction) <br>• 조건 만족 시 단일 실행(when) |
 | `11 week` | Day 23 | 24.09.19 | • 리액트 Tailwind CSS 적용 <br>• Tailwind 설정 및 사용방법 <br>• Tailwind CSS 주요 스타일링 클래스 사용 <br>• Tailwind 설정 파일 옵션(content, theme, variants, plugins) |
 | `11 week` | Day 24 | 24.09.20 | • Tailwind CSS 커스텀(Custom) <br>• Theme 커스텀 <br>• Tailwind CSS 선택자 <br>• Variants 옵션 <br>[• React와 Tailwind CSS를 활용한 이미지 그리드 및 레이아웃 과제](https://github.com/KwonSsohyun/FED_WEB_2024/issues/5) |
-| `12 week` | Day 25 | 24.09.24 | • 리액트 Chakra UI 적용 <br>• Chakra UI 설정 및 사용방법 <br>• Chakra UI 레이아웃 주요 컴포넌트(Box, Flex, Grid, Stack, AspectRatio, Center) <br>• Chakra UI 입력 및 아이콘 주요 컴포넌트(Input, InputGroup, Editable, PinInput, Chakra Icons) |
+| `12 week` | Day 25 | 24.09.24 | • 리액트 Chakra UI 적용 <br>• Chakra UI 설정 및 사용방법 <br>• Chakra Icons 사용방법 <br>• Chakra UI 레이아웃 주요 컴포넌트(Box, Flex, Grid, Stack, Center, AspectRatio) <br>• Chakra UI 요소 주요 컴포넌트(InputGroup, PinInput, Editable, Image) |
