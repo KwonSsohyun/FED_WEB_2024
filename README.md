@@ -35,3 +35,4 @@
 | `11 week` | Day 23 | 24.09.19 | • 리액트 Tailwind CSS 적용 <br>• Tailwind 설정 및 사용방법 <br>• Tailwind CSS 주요 스타일링 클래스 사용 <br>• Tailwind 설정 파일 옵션(content, theme, variants, plugins) |
 | `11 week` | Day 24 | 24.09.20 | • Tailwind CSS 커스텀(Custom) <br>• Theme 커스텀 <br>• Tailwind CSS 선택자 <br>• Variants 옵션 <br>[• React와 Tailwind CSS를 활용한 이미지 그리드 및 레이아웃 과제](https://github.com/KwonSsohyun/FED_WEB_2024/issues/5) |
 | `12 week` | Day 25 | 24.09.24 | • 리액트 Chakra UI 적용 <br>• Chakra UI 설정 및 사용방법 <br>• Chakra Icons 사용방법 <br>• Chakra UI 레이아웃 주요 컴포넌트(Box, Flex, Grid, Stack, Center, AspectRatio) <br>• Chakra UI 요소 주요 컴포넌트(InputGroup, PinInput, Editable, Image) <br>[• React와 Chakra UI를 활용한 인풋 레이아웃 과제](https://github.com/KwonSsohyun/FED_WEB_2024/issues/6) |
+| `12 week` | Day 26 | 24.09.26 | • Chakra UI 사용자 인터페이스 컴포넌트(Accordion, Tabs, Modal, Drawer, Popover) <br>• Chakra UI 상태 관리 훅(useDisclosure) <br>• Chakra UI 테마(Theme) |
