@@ -5,10 +5,10 @@ import { ChevronDownIcon } from '@chakra-ui/icons';
 export default function App() {
     return <div>
         <Center> 
-            <VStack w={500} pt={10}>
+            <VStack w={500} my={50}>
                 <Center fontSize="2xl">회원가입</Center>
                 
-                <InputGroup mb={5}>
+                <InputGroup mt={5}>
                     <VStack align={'start'} w='100%'>
                         <FormLabel>이름</FormLabel>
                         <HStack w='100%'>
@@ -18,7 +18,7 @@ export default function App() {
                     </VStack>
                 </InputGroup>
 
-                <InputGroup mb={5}>
+                <InputGroup mt={5}>
                     <VStack align={'start'} w='100%'>
                         <FormLabel>이메일 주소</FormLabel>
                         <HStack w='100%'>
@@ -28,7 +28,7 @@ export default function App() {
                     </VStack>
                 </InputGroup>
 
-                <InputGroup mb={5}>
+                <InputGroup mt={5}>
                     <VStack align={'start'} w='100%'>
                         <FormLabel>비밀번호 만들기</FormLabel>
                         <HStack w='100%'>
@@ -37,7 +37,7 @@ export default function App() {
                     </VStack>
                 </InputGroup>
 
-                <InputGroup mb={5}>
+                <InputGroup mt={5}>
                     <VStack align={'start'} w='100%'>
                         <FormLabel>비밀번호 확인</FormLabel>
                         <HStack w='100%'>
@@ -46,7 +46,7 @@ export default function App() {
                     </VStack>
                 </InputGroup>
 
-                <InputGroup mb={5}>
+                <InputGroup mt={5}>
                     <VStack align={'start'} w='100%'>
                         <FormLabel>생년월일</FormLabel>
                         <HStack w='100%'>
@@ -63,7 +63,7 @@ export default function App() {
                     </VStack>
                 </InputGroup>
 
-                <InputGroup mb={5}>
+                <InputGroup mt={5}>
                     <VStack align={'start'} w='100%'>
                         <FormLabel>성별</FormLabel>
                         <HStack w='100%'>
@@ -75,7 +75,7 @@ export default function App() {
                     </VStack>
                 </InputGroup>
 
-                <InputGroup mb={5}>
+                <InputGroup mt={5}>
                     <VStack align={'start'} w='100%'>
                         <FormLabel>휴대전화</FormLabel>
                         <HStack w='100%'>
@@ -87,7 +87,7 @@ export default function App() {
                     </VStack>
                 </InputGroup>
 
-                <InputGroup mb={5}>
+                <InputGroup mt={5}>
                     <VStack align={'start'} w='100%'>
                         <FormLabel>지역</FormLabel>
                         <HStack w='100%'>
@@ -105,7 +105,7 @@ export default function App() {
                     </Checkbox>
                 </VStack>
 
-                <Button w='100%' mt={10} mb={20}>다음 단계</Button>
+                <Button w='100%' mt={10}>다음 단계</Button>
             </VStack>
         </Center>
     </div>
