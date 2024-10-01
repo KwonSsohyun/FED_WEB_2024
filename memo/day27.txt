@@ -1,0 +1,3 @@
+- React 렌더링 방식(CSR, SSG, SSR)
+- React 빌드 및 기본 CSR 방식 서버 구동
+- SSR 방식으로 빌드 및 서버 구동
