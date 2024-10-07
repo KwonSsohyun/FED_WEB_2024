@@ -1,5 +1,5 @@
 import React from 'react';
-import { ResponsiveBar } from '@nivo/bar'
+import { ResponsiveBar } from '@nivo/bar';
 import { studentsData, Student } from './studentsData';
 
 // ▶ 각 학생의 정보를 리턴
