@@ -4,6 +4,35 @@ import path from 'path';
 import fs from 'fs';
 import mime from 'mime-types';
 
+/*
+    ▶ 서버리스 아키텍처(Serverless Architecture)
+       이 코드는 서버리스 아키텍처를 경험하기 위해 작성된 코드
+       로컬에서 두 개의 서버를 띄워서 서버리스의 개념을 실험합니다.
+
+       ※ 2개의 서버
+          ① 서버리스 서버 로컬 실행
+            ⇒ npm i
+            ⇒ npm start
+
+          ② 리액트 애플리케이션(개발 서버 실행)
+            ⇒ npm i
+            ⇒ npm start
+
+        ---------------------------------------------------------------------------------
+
+        1) 서버리스에 등록할 함수 등록
+            ☁️ http://localhost:5555/upload
+                ※ 업로드 input폼에서 'user' 필드에 본인 이름 입력 (예: sohyun)
+
+
+        2) 서버리스에 등록한 함수 확인
+            ☁️ http://192.168.100.20:5555/cloud/{user}/{functionName}
+                ※ 등록한 함수의 파일 호출
+                    예시) http://192.168.100.20:5555/cloud/sohyun/calculator
+
+        ---------------------------------------------------------------------------------
+
+*/
 const app = express();
 app.use(express.json());
 app.use(express.raw());
@@ -45,11 +74,11 @@ app.get('/upload', (req,res)=>{
         <html>
             <head>
                 <meta charset="UTF-8"/>
-                <title>업로드 테스트 페이지</title>
+                <title>서버리스 아키텍처(Serverless Architecture)</title>
             </head>
             <body>
                 <form action="/upload" method="post" enctype="multipart/form-data">
-                    <input name="user"/>
+                    <input name="user" value="sohyun"/>
                     <input name="file" type="file"/>
                     <button type="submit">업로드</button>
                 </form>
