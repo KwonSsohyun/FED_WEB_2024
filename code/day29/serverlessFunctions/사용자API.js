@@ -17,6 +17,7 @@
       그 결과를 result 변수에 저장
 
 */
+// 참고파일 : menulistfilter.js
 export default async () => {
     const result = await fetch("사용자 API 경로").then(v=>v.json());
     return JSON.stringify(result);

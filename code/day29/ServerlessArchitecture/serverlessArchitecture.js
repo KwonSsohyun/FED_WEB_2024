@@ -3,6 +3,7 @@ import multer from 'multer';
 import path from 'path';
 import fs from 'fs';
 import mime from 'mime-types';
+import cors from 'cors'; // CORS 패키지 추가
 
 /*
     ▶ 서버리스 아키텍처(Serverless Architecture)
@@ -33,15 +34,25 @@ import mime from 'mime-types';
         ---------------------------------------------------------------------------------
 
 */
+// ▶ Express 애플리케이션 생성
 const app = express();
+
+// ▶ CORS 미들웨어 추가 : 모든 도메인에서 요청 허용
+app.use(cors());
+
+// ▶ Body 데이터를 JSON 형식으로 처리
 app.use(express.json());
 app.use(express.raw());
 app.use(express.text());
 app.use(express.urlencoded({extended:true}));
+
+// ▶ Body 데이터를 JSON으로 변환하는 미들웨어
 app.use((req,res,next)=>{
     try { req.body = JSON.parse(req.body); } catch(e) {}
     next();
 });
+
+// ▶ 응답 중복 방지를 위한 미들웨어
 app.use((req,res,next)=>{
     let isSent = false;
     const origSend = res.send;
@@ -52,6 +63,8 @@ app.use((req,res,next)=>{
     }
     next();
 })
+
+// ▶ 파일 업로드를 위한 multer 설정
 const storage = multer.diskStorage({
     destination:function (req,file,cb){
         const user = req.body.user;
@@ -63,12 +76,17 @@ const storage = multer.diskStorage({
         cb(null, file.originalname)
     }
 });
+
 const fileExt = (filename)=>{
     const ext = path.extname(filename);
     const fileNameWithoutExt = path.basename(filename, ext);
     return {ext, fileNameWithoutExt};
 }
+
+// ▶ Multer 미들웨어를 사용하여 파일 업로드 처리
 const upload = multer({storage:storage});
+
+// ▶ 업로드 페이지 제공
 app.get('/upload', (req,res)=>{
     res.send(`<!DOCTYPE html>
         <html>
@@ -86,6 +104,7 @@ app.get('/upload', (req,res)=>{
         </html>
     `);
 });
+// ▶ 업로드 처리
 app.post('/upload', upload.single('file'), (req, res)=>{
     const user = req.body.user;
     const file = req.file;
@@ -94,6 +113,8 @@ app.post('/upload', upload.single('file'), (req, res)=>{
     const filePath = path.join('/cloud', user, fileNameWithoutExt);
     res.send(`파일이 ${filePath}경로에 연결되었습니다.`);
 });
+
+// ▶ 파일 다운로드 처리
 app.get('/direct/:user/:filename', (req,res)=>{
     const user = req.params.user;
     const filename = req.params.filename;
@@ -107,6 +128,8 @@ app.get('/direct/:user/:filename', (req,res)=>{
         res.status(500).send('파일을 읽는 중 오류가 발생했습니다.');
     })
 });
+
+// ▶ 서버리스 함수 호출 처리
 app.get('/cloud/:user/:filename', async (req,res)=>{
     const user = req.params.user;
     const filename = req.params.filename;
@@ -126,4 +149,29 @@ app.get('/cloud/:user/:filename', async (req,res)=>{
     }
 });
 
+app.post('/cloud/:user/:filename', async (req, res) => {
+    const user = req.params.user;
+    const filename = req.params.filename;
+    req.user = user;
+    
+    const filePath = './' + path.join('cloud', user, filename + '.js');
+    if (!fs.existsSync(filePath)) return res.status(404).send('해당 파일을 찾을 수 없습니다.');
+
+    try {
+        const importedModule = await import('./' + path.join('cloud', user, filename + '.js').replaceAll('\\', '/'));
+        
+        if (importedModule.default && typeof importedModule.default === 'function') {
+            const result = await importedModule.default(req, res);
+            res.send(result);
+        } else {
+            res.status(400).send('파일에서 export default로 내보낸 함수가 없습니다.');
+        }
+    } catch (err) {
+        console.log(err);
+        res.status(500).send('파일을 가져오거나 함수를 실행하는 중 오류가 발생했습니다.');
+    }
+});
+
+
+// ▶ 서버리스 서버 실행(5555 포트)
 app.listen(5555);

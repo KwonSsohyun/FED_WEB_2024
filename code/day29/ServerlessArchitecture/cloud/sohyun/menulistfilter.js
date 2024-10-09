@@ -15,5 +15,5 @@ export default async (req,res) => {
 
     return JSON.stringify({
         datas: menu.datas.filter(v=>!(v == '내용'))
-    });
+    }) 
 }

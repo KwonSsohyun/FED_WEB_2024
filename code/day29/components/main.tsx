@@ -4,6 +4,11 @@ import App from './app';
 
 const root = ReactDOM.createRoot(document.querySelector("#reactRoot") as HTMLElement);
 
+import ServerlessAPI from './ServerlessAPI';
+
 root.render(
-     <App/>
+     <>
+          <ServerlessAPI/>
+          {/* <App/> */}
+     </>
 );

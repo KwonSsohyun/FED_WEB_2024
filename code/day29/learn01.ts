@@ -34,9 +34,10 @@
       Cloud Functions에 함수를 등록하면, 해당 함수에 대한 URL이 생성됩니다.
       이 URL에 접근하면 자동으로 함수가 실행되어 결과를 반환합니다.
 
-      예시 URL
-      ☁️ http://192.168.100.20:5555/cloud/cx/sd
-      ☁️ http://192.168.100.20:5555/direct/abc/test.jpg
+      ● 예시 URL
+      ☁️ 서버리스 함수 등록                                 : http://localhost:5555/upload
+      ☁️ 서버리스에 등록한 함수 실행                         : http://localhost:5555/cloud/sohyun/timechange
+      ☁️ 서버리스에 등록한 리액트 빌드된 HTML 파일 스트리밍    : http://localhost:5555/direct/sohyun/index.html
 
 
 
