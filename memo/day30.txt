@@ -1,0 +1,6 @@
+- Next.js 설정 및 사용방법
+- Next.js 폴더 구조(components, pages, public, styles)
+- Next.js 개발서버, 빌드, 서버배포 실행 명령어
+- SSR 빌드 배포 함수(getServerSideProps)
+- SSG 빌드 배포 함수(getStaticProps)
+- Next.js 다국어 지원(next-i18next)
