@@ -16,6 +16,6 @@ export default {
     },
     nonExplicitSupportedLngs: true,
     trailingSlash: false,
-    poweredByHgeader: false,
+    poweredByHeader: false,
     outputFileTracing: true
 }
