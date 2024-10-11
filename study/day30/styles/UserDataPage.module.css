@@ -1,0 +1,11 @@
+/* UserDataPage.module.css */
+
+/* 사용자 데이터 항목 스타일 */
+.userItem {
+    font-size: 15px; /* 항목 텍스트 크기 (작게 설정) */
+    margin-bottom: 15px; /* 항목 간 간격 추가 */
+    padding: 10px; /* 패딩 추가로 여백 효과 */
+    border: 1px solid #ddd; /* 경계선 추가 (선택 사항) */
+    border-radius: 4px; /* 모서리 둥글게 (선택 사항) */
+    background-color: #f9f9f9; /* 배경 색상 (선택 사항) */
+}

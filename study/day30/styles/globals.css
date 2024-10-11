@@ -1,0 +1,31 @@
+/* styles/globals.css */
+
+/* 모든 요소의 박스 모델을 border-box로 설정 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* body 스타일 */
+body {
+    font-family: Arial, sans-serif; /* 기본 폰트 설정 */
+    line-height: 1.6; /* 줄 높이 설정 */
+    background-color: #f0f0f0; /* 배경색 설정 */
+}
+
+h1 {
+    font-size: 40px;
+}
+
+/* 링크 스타일 */
+a {
+    font-size: 30px;
+    color: pink; /* 링크 색상 */
+    text-decoration: none; /* 링크 밑줄 제거 */
+}
+
+a:hover {
+    font-size: 30px;
+    text-decoration: underline; /* 마우스 오버 시 밑줄 추가 */
+}

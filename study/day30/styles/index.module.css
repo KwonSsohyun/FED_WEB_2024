@@ -1,0 +1,24 @@
+/* styles/index.module.css */
+
+/* 전체 컨테이너 스타일 */
+.container {
+    max-width: 800px;
+    margin: 0 auto; /* 가운데 정렬 */
+    padding: 20px;
+    background-color: #fff; /* 배경색 설정 */
+    border-radius: 8px; /* 모서리 둥글게 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+}
+
+/* 제목 스타일 */
+.title {
+    font-size: 24px;
+    color: #009daf; /* 제목 색상 설정 */
+    margin-bottom: 20px;
+}
+
+/* 본문 스타일 */
+.content {
+    font-size: 16px;
+    color: #666; /* 본문 색상 설정 */
+}
