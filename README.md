@@ -3,7 +3,7 @@
 실전 웹 프론트엔드 학습한 내용을 기록합니다.
 
     강사 이름 : 김현
-    수업 기간 : 24.07.11 ~ 24.11.08 ( 40일/120시간 )
+    수업 기간 : 24.07.11 ~ 24.11.15 ( 44일/132시간 )
     수업 내용 : 웹 프론트엔드 수업 👩🏻‍💻
 
 ### 학습 기록
@@ -40,3 +40,4 @@
 | `13 week` | Day 28 | 24.10.04 | • 리액트 Nivo Chart 데이터 시각화 <br>• 기본 차트(Bar, Line, Pie) <br>• 복합 차트(Radial-Bar, Radar) <br>• 계층적 및 통계적 차트(Tree, Boxplot) <br>[• Nivo Chart 데이터 시각화 활용한 과제](https://github.com/KwonSsohyun/FED_WEB_2024/issues/9) |
 | `14 week` | Day 29 | 24.10.08 | • 리액트 서버리스 아키텍처(ServerLess) <br>• 서버리스 함수 등록 및 사용(Cloud Functions) <br>• 서버리스 환경에 리액트 애플리케이션 빌드 배포(Build) <br>• 서버리스 함수와 리액트 애플리케이션 간의 통신(Fetch) <br>• 서버리스 API 데이터 가져오기 함수 |
 | `14 week` | Day 30 | 24.10.10 | • Next.js 설정 및 사용방법 <br>• Next.js 폴더 구조(components, pages, public, styles) <br>• Next.js 개발서버, 빌드, 서버배포 실행 명령어 <br>• SSR 빌드 배포 함수(getServerSideProps) <br>• SSG 빌드 배포 함수(getStaticProps) <br>• Next.js 다국어 지원(next-i18next) <br>[• Next.js와 TypeScript로 구현한 사용자 데이터 관리 페이지 과제](https://github.com/KwonSsohyun/FED_WEB_2024/issues/10) <br>[• Next.js에서 next-i18next와 CommonJS 모듈을 사용한 다국어 지원 과제](https://github.com/KwonSsohyun/FED_WEB_2024/issues/11) |
+| `15 week` | Day 31 | 24.11.12 | • 자바스크립트 프록시 객체(Proxy) <br>• 핸들러 메서드(get, set, has, deleteProperty, apply, construct) |
