@@ -1,0 +1,5 @@
+- 비동기 데이터 통신
+- AJAX 개념
+- Fetch API
+- Fetch 요청 옵션(method, headers, body, mode, credentials, cache, redirect)
+- Fetch 응답 속성(status, statusText, ok, headers, url, redirected, json(), text(), blob())
