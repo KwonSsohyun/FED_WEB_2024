@@ -1,0 +1,7 @@
+- CDN 웹 라이브러리 사용
+- CryptoJS(데이터 암호화 및 복호화)
+- Dropzone(파일 업로드)
+- SweetAlert2(알림창 커스터마이징)
+- Swiper(슬라이더 커스터마이징)
+- Chart.js(차트 시각화)
+- interact.js(인터랙티브 기능)
