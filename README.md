@@ -43,3 +43,4 @@
 | `15 week` | Day 31 | 24.11.12 | • 자바스크립트 프록시 객체(Proxy) <br>• 핸들러 메서드(get, set, has, deleteProperty, apply, construct) |
 | `15 week` | Day 32 | 24.11.13 | • 비동기 데이터 통신 <br>• AJAX 개념 <br>• Fetch API <br>• Fetch 요청 옵션(method, headers, body, credentials) <br>• Fetch 응답 속성(status, ok, json(), text()) |
 | `15 week` | Day 33 | 24.11.14 | • CDN 웹 라이브러리 사용 <br>• CryptoJS(데이터 암호화 및 복호화) <br>• Dropzone(파일 업로드) <br>• SweetAlert2(알림창 커스터마이징) <br>• Swiper(슬라이더 커스터마이징) <br>• Chart.js(차트 시각화) <br>• interact.js(인터랙티브 기능) |
+| `15 week` | Day 34 | 24.11.15 | • Node.js Express 서버 <br>• API 라우팅(Path parameter) `/board/:id` <br>• 중첩 라우팅 `/board/:id/:pw/:name` |
