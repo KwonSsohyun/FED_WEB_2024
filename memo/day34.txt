@@ -1,0 +1,3 @@
+- Node.js Express 서버
+- API 라우팅(Path parameter)(/board/:id)
+- 중첩 라우팅(/board/:id/:pw/:name)
